@@ -1,0 +1,227 @@
+@page "/GLT00600" 
+@using GLT00600Common.DTOs
+@inherits R_Page
+@attribute [R_Page(Title = "Journal List")]
+
+<R_PredefinedDock R_InstantiateDock="@Predef_JournalEntry" R_AfterOpenPredefinedDock="@AfterPredef_JournalEntry"></R_PredefinedDock>
+<R_GroupBox Title="Journal Description">
+    <R_StackLayout Row="true" Spacing="1">
+        <R_ItemLayout xs="1">
+            <R_Label>Departments</R_Label>
+        </R_ItemLayout>
+        <R_ItemLayout xs="1" Width="100">
+            <R_TextBox/>
+        </R_ItemLayout>
+        <R_ItemLayout>
+            <R_Lookup/>
+        </R_ItemLayout>
+        <R_ItemLayout xs="2" Class="me-5">
+            <R_TextBox/>
+        </R_ItemLayout>
+        <R_ItemLayout xs="1" Class="ms-3">
+            <R_Label>Currency</R_Label>
+        </R_ItemLayout>
+        <R_ItemLayout xs="2" Class="me-5">
+            <R_TextBox/>
+        </R_ItemLayout>
+        <R_ItemLayout xs="2">
+            <R_Label> </R_Label>
+        </R_ItemLayout>
+        <R_ItemLayout xs="1">
+            <R_Label>Prelist</R_Label>
+        </R_ItemLayout>
+        <R_ItemLayout xs="1">
+            <R_TextBox/>
+        </R_ItemLayout>
+    </R_StackLayout>
+ 
+    <R_StackLayout Row="true" Spacing="1">
+            <R_ItemLayout xs="1">
+                <R_Label>Reference No.</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="2" Class="me-5">
+                <R_TextBox/>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label>Ref Date. *</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="me-5">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label>Base Rate</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label> </R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label>Currency Rate</R_Label>
+            </R_ItemLayout>
+        </R_StackLayout>
+
+    <R_StackLayout >
+        <R_StackLayout Row="true" Spacing="1">
+                <R_ItemLayout xs="1">
+                    <R_Label>Document No.</R_Label>
+                </R_ItemLayout>
+                <R_ItemLayout xs="1" Class="me-5">
+                    <R_TextBox/>
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_Label>Doc Date</R_Label>
+                </R_ItemLayout>
+                <R_ItemLayout xs="1" Class="me-5">
+                    <R_TextBox/>
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_Label>Local Currency</R_Label>
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_TextBox />
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_TextBox />
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_TextBox />
+                </R_ItemLayout>
+                <R_ItemLayout xs="1">
+                    <R_TextBox />
+                </R_ItemLayout>
+                <R_ItemLayout xs="1" Class="ms-4">
+                    <R_Label>Total Debit</R_Label>
+                </R_ItemLayout>
+                <R_ItemLayout xs="2">
+                    <R_TextBox />
+            </R_ItemLayout>
+     </R_StackLayout>
+    </R_StackLayout>
+    <R_StackLayout>
+        <R_StackLayout Row="true" Spacing="1">
+            <R_ItemLayout xs="1">
+                <R_Label></R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="me-5">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label></R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="me-5">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Label>Base Currency</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_TextBox />
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="ms-4">
+                <R_Label>Total Credit</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="2">
+                <R_TextBox />
+            </R_ItemLayout>
+        </R_StackLayout>
+    </R_StackLayout>
+    <R_StackLayout>
+        <R_StackLayout Row="true" Spacing="1">
+            <R_ItemLayout xs="1">
+                <R_Label>Description</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="8">
+                <R_TextBox />
+            </R_ItemLayout>
+        </R_StackLayout>
+    </R_StackLayout>
+    <R_StackLayout>
+        <R_StackLayout Row="true" Spacing="1">
+            <R_ItemLayout xs="1">
+                <R_Label>Status</R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="2">
+                <R_TextBox />
+            </R_ItemLayout>
+        </R_StackLayout>
+    </R_StackLayout>
+    <R_StackLayout Row="true" Spacing="1">
+        <R_ItemLayout xs="2">
+            <R_Label> </R_Label>
+        </R_ItemLayout>
+    </R_StackLayout>
+    <R_StackLayout>
+        <R_StackLayout Row="true" Spacing="1">
+            <R_ItemLayout xs="1">
+                <R_Button>Add</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Button>Copy</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Button>Modify</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Button>Delete</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="ms-3">
+                <R_Button>Cancel</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="me-3">
+                <R_Button>Save</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Button>Print</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+               <R_Label> </R_Label>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="ms-3">
+                <R_Button>Submit</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1">
+                <R_Button>Approve</R_Button>
+            </R_ItemLayout>
+            <R_ItemLayout xs="1" Class="me-3">
+                <R_Button>Commit</R_Button>
+            </R_ItemLayout>
+        </R_StackLayout>
+    </R_StackLayout>
+</R_GroupBox>
+
+<R_GroupBox Title="Journal Detail">
+    <R_StackLayout>
+                <R_Grid @ref="@_gridJournalRef"
+                        DataSource="@_GLT00600ViewModel.loGridList"
+                        Pageable="true"
+                        R_ConductorGridSource="_conductorGridJournal"
+                        R_GridType="@R_eGridType.Original"
+                        R_ServiceGetListRecord="@JournalGrid_R_ServiceGetListRecord">
+        <R_GridColumns>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.INO)" HeaderText="No."></R_GridNumericColumn>
+            <R_GridTextColumn FieldName="@nameof(JournalDetailDTO.CGLACCOUNT_NO)" HeaderText="Account No."></R_GridTextColumn>
+            <R_GridTextColumn FieldName="@nameof(JournalDetailDTO.CGLACCOUNT_NAME)" HeaderText="Account No"></R_GridTextColumn>
+            <R_GridTextColumn FieldName="@nameof(JournalDetailDTO.CCENTER_NAME)" HeaderText="Center"></R_GridTextColumn>
+            <R_GridTextColumn FieldName="@nameof(JournalDetailDTO.CDBCR)" HeaderText="D/C"></R_GridTextColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NDEBIT)" HeaderText="Debit"></R_GridNumericColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NCREDIT)" HeaderText="Credit"></R_GridNumericColumn>
+            <R_GridTextColumn FieldName="@nameof(JournalDetailDTO.CDETAIL_DESC)" HeaderText="Description"></R_GridTextColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NLDEBIT)" HeaderText="DB (Local)"></R_GridNumericColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NLCREDIT)" HeaderText="CR (Local)"></R_GridNumericColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NBDEBIT)" HeaderText="DB (Base)"></R_GridNumericColumn>
+            <R_GridNumericColumn FieldName="@nameof(JournalDetailDTO.NBCREDIT)" HeaderText="CR (Base)"></R_GridNumericColumn>
+        </R_GridColumns>
+    </R_Grid>
+    <R_ConductorGrid @ref="_conductorGridJournal"
+                     R_ViewModel="_GLT00600ViewModel">
+    </R_ConductorGrid>
+    </R_StackLayout>
+    </R_GroupBox>
